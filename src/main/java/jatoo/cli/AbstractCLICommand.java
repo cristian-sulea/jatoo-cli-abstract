@@ -29,7 +29,7 @@ import jatoo.resources.ResourcesTexts;
  * Base class for CLI command implementations.
  * 
  * @author <a href="http://cristian.sulea.net" rel="author">Cristian Sulea</a>
- * @version 2.0, June 7, 2017
+ * @version 2.1, June 8, 2017
  */
 public abstract class AbstractCLICommand {
 
@@ -78,7 +78,8 @@ public abstract class AbstractCLICommand {
 
   protected void printHelp(final String command, final Options options, final Throwable t) {
 
-    System.out.println(t.getMessage());
+    System.out.println();
+    System.out.println(t);
     System.out.println();
 
     printHelp(command, options);
